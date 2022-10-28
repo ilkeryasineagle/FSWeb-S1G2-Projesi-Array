@@ -103,7 +103,8 @@ Aşağıdakileri yapmak için sonCesitiKaldir işlevini kullanın:
    3. Ortaya çıkan diziyi döndürün
 
    Örneğin: sonCesitiKaldir(orijinalTatlar) çalıştırıldığında ["Kakule", "Muz",..."Çilek"] döndürülür.
-*/
+*/ 
+
 
 
 function sonCesitiKaldir(/*kod buraya*/){
