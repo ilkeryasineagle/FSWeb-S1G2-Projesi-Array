@@ -107,9 +107,12 @@ Aşağıdakileri yapmak için sonCesitiKaldir işlevini kullanın:
 
 
 
-function sonCesitiKaldir(/*kod buraya*/){
-  /*kod buraya*/
+function sonCesitiKaldir(gelenTatlar=[]){
+  gelenTatlar.pop();
+  return gelenTatlar;
 }
+console.log(sonCesitiKaldir(orijinalTatlar));
+
 
 
 /* Görev 5:
@@ -123,10 +126,11 @@ Aşağıdakileri yapmak için aşağıdaki indekstekiCesitiGetir işlevini kulla
    Örneğin: indekstekiCesitiGetir(orijinalTatlar, 2) çalıştırılmasıyla, Kakule'in başarıyla eklendiği varsayarsak sonuç "Ceviz" olucaktır.
 */
 
-function indekstekiCesitiGetir(/*kod buraya*/){
-  /*kod buraya*/
-}
+function indekstekiCesitiGetir(gelenTatlar=[],gelen_index){
 
+  return gelenTatlar[gelen_index];gelenTatlar
+}
+console.log(indekstekiCesitiGetir(orijinalTatlar, 2));
 
 /* Görev 6:
 
@@ -143,10 +147,11 @@ Aşağıdakileri yapmak için ismeGoreCesitCikar işlevini kullanın:
   İPUCU: Bunun için .splice() kullanabilirsiniz.
 */
 
-function ismeGoreCesitCikar(/*kod buraya*/){
-  /*kod buraya*/
+function ismeGoreCesitCikar(gelenTatlar=[],gelenCesit){
+  gelenTatlar.splice(gelenTatlar.indexOf(gelenCesit),1);
+  return gelenTatlar;
 }
-
+console.log(ismeGoreCesitCikar(orijinalTatlar, "Tarçın"));
 
 /* Görev 7:
 
@@ -169,9 +174,19 @@ Aşağıdakileri yapmak için ismeGoreFiltrele işlevini kullanın:
 */
 
 
-function ismeGoreFiltrele(/*kod buraya*/){
-  /*kod buraya*/
+function ismeGoreFiltrele(gelenTatlar=[],gelenCesit){
+  let gecici_dizi=[];
+  let sayac=0;
+  for(let i=0;i<gelenTatlar.length;i++){
+    if(gelenTatlar[i].includes(gelenCesit)){
+      gecici_dizi[sayac]=gelenTatlar[i];
+      sayac++;
+    }
+  }
+  return gecici_dizi;
 }
+console.log(ismeGoreFiltrele(orijinalTatlar, "Çikolata"));
+
 
 
 
@@ -186,10 +201,8 @@ Aşağıdakileri yapmak için ortalamaKelimeSayisi işlevini kullanın:
 
    Örneğin: ortalamaKelimeSayisi(orijinalTatlar) 0 ile 2 arasında bir sayı döndürmelidir.
 */
-
-function ortalamaKelimeSayisi(/*kod buraya*/){
-  /*kod buraya*/
-}
+function ortalamaKelimeSayisi([]){
+};
 
 
 /* ALIŞTIRMA 2:
