@@ -40,9 +40,10 @@ Aşağıdakileri yapmak için aşağıdaki kopyalama işlevini kullanın:
 */
 
 
-function kopyala(/*kod buraya*/){
-  /*kod buraya*/
+function kopyala(kopya_dizi=[]){
+  return kopya_dizi;
 }
+console.log(kopyala(orijinalTatlar));
 
 
 /* Görev 2:
@@ -56,9 +57,19 @@ Bir dizinin tam olarak 25 çeşit olduğunu onaylayın. İşleviniz şunları ka
 */
 
 
-function dizi25Cesitmi(/*kod buraya*/){
-  /*kod buraya*/
+function dizi25Cesitmi(kopya_dizi=[]){
+  let kontrol;
+  if (kopya_dizi.length === 25){
+    kontrol = true;
+  }
+  else {
+    kontrol = false;
+  }
+  return kontrol;
+
 }
+console.log(dizi25Cesitmi(orijinalTatlar));
+
 
 
 /* Görev 3:
@@ -74,10 +85,13 @@ Aşağıdakileri yapmak için cesitEkle işlevini kullanın:
 */
 
 
-function cesitEkle(/*kod buraya*/){
-  /*kod buraya*/
-}
+function cesitEkle(gelenTatlar, aroma){
+    let tatlar = gelenTatlar;
+    tatlar.unshift (aroma);
+    return tatlar;
 
+}
+console.log(cesitEkle(orijinalTatlar, "Kakule"));
 
 /* Cörev 4:
 
